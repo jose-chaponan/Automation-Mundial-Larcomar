@@ -1,0 +1,156 @@
+$color_rojo: #E20613
+$color_azul: #212844
+$color_blanco: #ffffff
+
+$funente_negrita: 'Conv_Prelo-Bold'
+$fuente_normal: 'Conv_Prelo-Medium' 
+
+body
+    font-family: $fuente_normal
+
+header
+    height: 40vh
+    min-height: 300px
+    position: relative
+    // z-index: 1
+    p
+        margin: 3vh 0 0
+    a,p
+        position: relative
+        z-index: 3
+header::before
+    background-color: $color_rojo
+    content: ""
+    position: absolute
+    top: 0
+    bottom: 0
+    right: 0
+    left: 0
+    z-index: -102
+header::after
+    content: ""
+    background: url(../images/confeti.svg) bottom center
+    position: absolute
+    background-size: 60%
+    top: 0
+    bottom: -15vh
+    left: 0
+    right: 0
+    width: 100%
+    height: 115%
+    z-index: 2
+
+.wrapper
+    margin-top: 15vh
+
+h2
+    font-size: 3.3rem
+    color: $color_azul
+    letter-spacing: .2rem
+    margin-bottom: 5vh
+    line-height: 1.3
+
+p
+    color: $color_azul
+    font-size: 2.3rem
+    letter-spacing: .1rem
+    margin-bottom: 5vh
+
+
+.wrapper
+    section
+        figure
+            position: relative
+            figcaption
+                color: $color_azul
+                font-size: 1.2rem
+                font-family: $funente_negrita
+                position: absolute
+    section:first-child
+        figure:first-child
+            figcaption
+                bottom: 5%
+                right: 30%
+        figure:last-child
+            figcaption
+                bottom: 0
+                left: 30%
+    section:nth-child(2)
+        figure:last-child
+            figcaption
+                bottom: 16%
+                right: 28%
+    section:last-child
+        figure:first-child
+            figcaption
+                bottom: 0
+                right: 16%
+        figure:last-child
+            figcaption
+                bottom: 0
+                right: 20%
+
+.operadores
+    margin: 5vh 0
+
+footer
+    background-color: $color_azul
+    padding: 9vh 0
+    aside
+        margin-top: 5vh
+        a
+            height: 6vh
+            margin: 0 .4vw
+            img
+                width: auto
+                height: 100%            
+    a:hover
+        opacity: .6
+
+@media all and (max-width: 830px)
+    header
+        height: 20vh
+        min-height: 180px
+        a
+            width: 40%!important
+        p
+            img
+                width: 80%
+    .wrapper
+        section
+            width: 100%
+            figure
+                width: 50%
+                margin-bottom: 5vh
+                figcaption
+                    bottom: -2vh!important
+                    left: 0!important
+                    right: 0!important
+                    margin: auto
+                    
+            h2,
+            p
+                width: 100%
+    
+    .operadores
+        img
+            width: 100%
+            margin: 1vh 0
+
+    footer
+        .link
+            width: 50%!important
+        aside
+            a
+                margin: 0 1vw
+                height: 5vh
+
+@media all and (max-width: 830px) and (orientation: landscape)
+    header
+        height: 100vh
+    footer
+        .link
+            width: 40%!important
+        aside
+            a
+                height: 10vh
